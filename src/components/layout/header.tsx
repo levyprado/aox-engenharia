@@ -23,8 +23,8 @@ export default function Header() {
 
   return (
     <header className='sticky top-0 left-0 z-10 w-full bg-primary'>
-      <Container className='flex h-16 items-center justify-between text-light md:h-20'>
-        <a href='#' className='w-28 lg:w-32'>
+      <Container className='flex h-16 items-center justify-between text-light md:h-20 xl:h-24'>
+        <a href='#' className='w-28 lg:w-32 xl:w-40'>
           <Image src='/logo.webp' alt='AOX' width={671} height={238} />
         </a>
 
