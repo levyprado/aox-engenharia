@@ -5,6 +5,7 @@ import { ListIcon, XIcon } from '@phosphor-icons/react/ssr'
 import Image from 'next/image'
 import { useState } from 'react'
 import Container from './container'
+import Button from './ui/button'
 
 const navItems = [
   { label: 'Início', href: '#' },
@@ -37,14 +38,13 @@ export default function Header() {
               {label}
             </a>
           ))}
-          <a
+          <Button
             href='https://google.com'
             target='_blank'
             rel='noreferrer noopener'
-            className='rounded-lg bg-accent px-4 py-2 font-semibold'
           >
             Fale conosco
-          </a>
+          </Button>
         </nav>
 
         <button
