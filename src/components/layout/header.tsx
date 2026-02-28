@@ -4,8 +4,8 @@ import { cn } from '@/lib/utils'
 import { ListIcon, XIcon } from '@phosphor-icons/react/ssr'
 import Image from 'next/image'
 import { useState } from 'react'
-import Container from './container'
-import Button from './ui/button'
+import Button from '../ui/button'
+import Container from '../ui/container'
 
 const navItems = [
   { label: 'Início', href: '#' },
