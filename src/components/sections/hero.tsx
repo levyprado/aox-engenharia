@@ -23,7 +23,7 @@ export default function Hero({ id, ...props }: HeroProps) {
             height={238}
             className='w-36 sm:w-48 xl:hidden'
           />
-          <h1 className='text-3xl font-black text-balance sm:text-4xl xl:text-5xl 2xl:text-6xl'>
+          <h1 className='text-3xl font-black text-balance sm:text-4xl xl:text-5xl xl:leading-14 2xl:text-6xl 2xl:leading-16'>
             Engenharia que transforma{' '}
             <span className='text-accent'>projetos em realidade</span>
           </h1>
