@@ -25,7 +25,7 @@ export default function Hero({ id, ...props }: HeroProps) {
           />
           <h1 className='text-3xl font-black text-balance sm:text-4xl xl:text-5xl xl:leading-14 2xl:text-6xl 2xl:leading-16'>
             Engenharia que transforma{' '}
-            <span className='text-accent'>projetos em realidade</span>
+            <span className='text-gradient'>projetos em realidade</span>
           </h1>
           <p className='max-w-sm rounded-xl bg-primary/40 p-0.5 text-lg font-medium text-pretty text-light/80 backdrop-blur-xs md:pl-2 xl:max-w-lg xl:text-xl'>
             Construção civil, projetos residenciais, comerciais e outros em
