@@ -44,7 +44,7 @@ export default function Services({ id, ...props }: ServicesProps) {
   return (
     <section id={id} {...props} className='bg-gray-50'>
       <Container className='section-padding'>
-        <h2 className='text-2xl font-semibold text-pretty md:text-3xl lg:text-4xl'>
+        <h2 className='text-3xl font-semibold text-pretty md:text-4xl'>
           A AOX Engenharia -{' '}
           <span className='text-xl font-medium text-balance text-primary/60 md:text-2xl lg:text-3xl'>
             Soluções completas de engenharia para o seu projeto
