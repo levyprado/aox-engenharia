@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Button from '../ui/button'
 import Container from '../ui/container'
 
@@ -15,14 +14,7 @@ export default function Hero({ id, ...props }: HeroProps) {
     >
       <div className='pointer-events-none absolute inset-0 bg-linear-to-b from-primary via-primary/10 to-transparent' />
       <Container>
-        <div className='relative mt-[10%] flex flex-col items-center gap-3 text-center text-light sm:max-w-lg sm:items-start sm:text-start md:mt-[15%] lg:mt-[7%] xl:max-w-2xl xl:gap-6 2xl:max-w-4xl'>
-          <Image
-            src='/logo.webp'
-            alt='AOX'
-            width={671}
-            height={238}
-            className='w-36 sm:w-48 xl:hidden'
-          />
+        <div className='relative mt-[10%] flex flex-col items-center gap-3 text-center text-light sm:max-w-lg sm:items-start sm:text-start md:mt-[15%] lg:mt-[10%] xl:mt-[7%] xl:max-w-2xl xl:gap-6 2xl:max-w-4xl'>
           <h1 className='text-3xl font-black text-balance sm:text-4xl xl:text-5xl xl:leading-14 2xl:text-6xl 2xl:leading-16'>
             Engenharia que transforma{' '}
             <span className='text-gradient'>projetos em realidade</span>
@@ -31,7 +23,7 @@ export default function Hero({ id, ...props }: HeroProps) {
             Construção civil, projetos residenciais, comerciais e outros em
             Cuiabá e região.
           </p>
-          <div className='hidden items-center gap-4 text-lg xl:flex'>
+          <div className='flex items-center gap-4 xl:text-lg'>
             <Button
               href='#servicos'
               className='border-2 border-light/20 bg-light/10 px-6 py-2.5 backdrop-blur-md hover:bg-light/20'
