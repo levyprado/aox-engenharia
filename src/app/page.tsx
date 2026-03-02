@@ -1,3 +1,4 @@
+import Footer from '@/components/layout/footer'
 import Header from '@/components/layout/header'
 import About from '@/components/sections/about'
 import Contact from '@/components/sections/contact'
@@ -18,7 +19,7 @@ export default function HomePage() {
         <Steps />
         <Contact id='contato' />
       </main>
-      <footer></footer>
+      <Footer />
     </>
   )
 }
