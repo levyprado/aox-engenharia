@@ -1,5 +1,6 @@
 import Header from '@/components/layout/header'
 import About from '@/components/sections/about'
+import Contact from '@/components/sections/contact'
 import Hero from '@/components/sections/hero'
 import Projects from '@/components/sections/projects'
 import Services from '@/components/sections/services'
@@ -15,6 +16,7 @@ export default function HomePage() {
         <About id='sobre' />
         <Projects id='projetos' />
         <Steps />
+        <Contact id='contato' />
       </main>
       <footer></footer>
     </>
