@@ -3,6 +3,7 @@ import About from '@/components/sections/about'
 import Hero from '@/components/sections/hero'
 import Projects from '@/components/sections/projects'
 import Services from '@/components/sections/services'
+import Steps from '@/components/sections/steps'
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
         <Services id='servicos' />
         <About id='sobre' />
         <Projects id='projetos' />
+        <Steps />
       </main>
       <footer></footer>
     </>
