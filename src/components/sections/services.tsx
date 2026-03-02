@@ -8,34 +8,34 @@ type ServicesProps = {
 const services = [
   {
     title: 'Construção Residencial',
-    descripiton: 'Casas e condomínios planejados com qualidade e segurança',
+    description: 'Casas e condomínios planejados com qualidade e segurança',
     iconSrc: '/residencial.png',
   },
   {
     title: 'Construção Comercial',
-    descripiton: 'Galpões, lojas e edifícios comerciais do projeto à entrega',
+    description: 'Galpões, lojas e edifícios comerciais do projeto à entrega',
     iconSrc: '/comercial.png',
   },
   {
     title: 'Energia Solar',
-    descripiton:
+    description:
       'Instalação de painéis solares com projeto elétrico homologado',
     iconSrc: '/solar.png',
   },
   {
     title: 'Reformas e Ampliações',
-    descripiton:
+    description:
       'Reforma, ampliação e retrofit de imóveis residenciais e comerciais',
     iconSrc: '/reforma.png',
   },
   {
     title: 'Projetos e Laudos Técnicos',
-    descripiton: 'Projetos estruturais, elétricos, hidráulicos e ARTs',
+    description: 'Projetos estruturais, elétricos, hidráulicos e ARTs',
     iconSrc: '/laudo.png',
   },
   {
     title: 'Consultoria em Engenharia',
-    descripiton: 'Assesoria técnica, vistorias e laudos periciais',
+    description: 'Assesoria técnica, vistorias e laudos periciais',
     iconSrc: '/consultoria.png',
   },
 ]
@@ -68,7 +68,7 @@ export default function Services({ id, ...props }: ServicesProps) {
                 </h3>
               </div>
               <p className='text-lg leading-normal font-medium text-primary/60'>
-                {service.descripiton}
+                {service.description}
               </p>
             </div>
           ))}
