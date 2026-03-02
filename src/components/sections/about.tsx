@@ -11,10 +11,10 @@ export default function About({ id, ...props }: AboutProps) {
     <section id={id} {...props}>
       <Container className='section-padding grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center'>
         <div className='flex flex-col gap-4 lg:gap-6'>
-          <h2 className='text-3xl font-semibold text-pretty md:text-4xl'>
+          <h2 className='text-3xl font-extrabold text-balance md:text-4xl'>
             Quem <span className='text-gradient'>Somos</span>
           </h2>
-          <p className='text-lg leading-relaxed font-medium text-primary/60 xl:text-xl'>
+          <p className='text-lg leading-relaxed font-medium text-pretty text-primary/60 xl:text-xl'>
             A AOX Engenharia é uma empresa de engenharia civil com sede em
             Cuiabá, Mato Grosso, atuando em construção residencial, comercial e
             na instalação de sistemas de energia solar fotovoltaica. Com

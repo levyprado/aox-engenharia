@@ -55,10 +55,10 @@ export default function Projects({ id, ...props }: ProjectsProps) {
     <section id={id} className='bg-gray-50' {...props}>
       <Container className='section-padding flex flex-col gap-6 lg:gap-12'>
         <div className='space-y-1 text-center lg:space-y-2'>
-          <h2 className='text-3xl font-semibold text-pretty md:text-4xl'>
+          <h2 className='text-3xl font-extrabold text-balance md:text-4xl'>
             Obras <span className='text-gradient'>Realizadas</span>
           </h2>
-          <p className='text-lg font-medium text-primary/60 xl:text-xl'>
+          <p className='text-lg font-medium text-pretty text-primary/60 xl:text-xl'>
             Conheça alguns dos nossos projetos entregues
           </p>
         </div>
