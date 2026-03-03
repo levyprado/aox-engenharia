@@ -15,20 +15,20 @@ const contacts = [
   {
     icon: ChatCircleIcon,
     label: 'WhatsApp',
-    value: '(65) 99999-9999',
+    value: '(65) 99958-0809',
     href: WHATSAPP_URL,
   },
   {
     icon: PhoneIcon,
     label: 'Telefone',
-    value: '(65) 99999-9999',
+    value: '(65) 99958-0809',
     href: 'tel:+5565999999999',
   },
   {
     icon: EnvelopeSimpleIcon,
-    label: 'E-mail',
-    value: 'contato@aoxengenharia.com.br',
-    href: 'mailto:contato@aoxengenharia.com.br',
+    label: 'Email',
+    value: 'aox.engenharia@gmail.com',
+    href: 'mailto:aox.engenharia@gmail.com',
   },
 ]
 
