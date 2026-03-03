@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Button from '../ui/button'
 import Container from '../ui/container'
 
@@ -9,10 +10,31 @@ export default function Hero({ id, ...props }: HeroProps) {
   return (
     <section
       id={id}
-      className='relative flex h-[80svh] w-full flex-col bg-[url(/hero-mobile.webp)] bg-cover bg-center sm:h-[70vh] sm:bg-[url(/hero.webp)]'
+      className='relative flex h-[80svh] w-full flex-col sm:h-[70vh]'
       {...props}
     >
-      <div className='pointer-events-none absolute inset-0 bg-linear-to-b from-primary via-primary/10 to-transparent' />
+      <div className='absolute inset-0 -z-10 sm:hidden'>
+        <Image
+          src='/hero-mobile.webp'
+          alt='Imagem de fundo AOX'
+          fill
+          priority
+          className='object-cover object-center'
+          quality={90}
+        />
+      </div>
+      <div className='absolute inset-0 -z-10 hidden sm:block'>
+        <Image
+          src='/hero.webp'
+          alt='Imagem de fundo AOX'
+          fill
+          priority
+          className='object-cover object-center'
+          quality={90}
+        />
+      </div>
+      <div className='pointer-events-none absolute inset-0 z-0 bg-linear-to-b from-primary via-primary/10 to-transparent' />
+
       <Container>
         <div className='relative mt-[10%] flex flex-col items-center gap-3 text-center text-light sm:max-w-lg sm:items-start sm:text-start md:mt-[15%] lg:mt-[10%] xl:mt-[7%] xl:max-w-2xl xl:gap-6 2xl:max-w-4xl'>
           <h1 className='text-3xl font-black text-balance sm:text-4xl xl:text-5xl xl:leading-14 2xl:text-6xl 2xl:leading-16'>
