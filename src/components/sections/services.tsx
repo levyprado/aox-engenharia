@@ -1,44 +1,10 @@
+import { services } from '@/data/services'
 import Image from 'next/image'
 import Container from '../ui/container'
 
 type ServicesProps = {
   id: string
 } & React.ComponentProps<'section'>
-
-const services = [
-  {
-    title: 'Construção Residencial',
-    description: 'Casas e condomínios planejados com qualidade e segurança',
-    iconSrc: '/residencial.png',
-  },
-  {
-    title: 'Construção Comercial',
-    description: 'Galpões, lojas e edifícios comerciais do projeto à entrega',
-    iconSrc: '/comercial.png',
-  },
-  {
-    title: 'Energia Solar',
-    description:
-      'Instalação de painéis solares com projeto elétrico homologado',
-    iconSrc: '/solar.png',
-  },
-  {
-    title: 'Reformas e Ampliações',
-    description:
-      'Reforma, ampliação e retrofit de imóveis residenciais e comerciais',
-    iconSrc: '/reforma.png',
-  },
-  {
-    title: 'Projetos e Laudos Técnicos',
-    description: 'Projetos estruturais, elétricos, hidráulicos e ARTs',
-    iconSrc: '/laudo.png',
-  },
-  {
-    title: 'Consultoria em Engenharia',
-    description: 'Assesoria técnica, vistorias e laudos periciais',
-    iconSrc: '/consultoria.png',
-  },
-]
 
 export default function Services({ id, ...props }: ServicesProps) {
   return (
@@ -57,12 +23,7 @@ export default function Services({ id, ...props }: ServicesProps) {
               className='row-span-2 grid grid-rows-subgrid gap-3 rounded-lg bg-light p-4 shadow-sm xl:p-6'
             >
               <div className='flex items-center gap-3'>
-                <Image
-                  src={service.iconSrc}
-                  alt={`Ícone ${service.title}`}
-                  width={40}
-                  height={40}
-                />
+                <Image src={service.iconSrc} alt='' className='size-10' />
                 <h3 className='text-lg leading-tight font-semibold xl:text-xl'>
                   {service.title}
                 </h3>

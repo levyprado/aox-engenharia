@@ -1,44 +1,5 @@
-import {
-  CalculatorIcon,
-  CalendarDotsIcon,
-  ClipboardTextIcon,
-  HardHatIcon,
-  ShieldCheckIcon,
-} from '@phosphor-icons/react/dist/ssr'
+import { steps } from '@/data/steps'
 import Container from '../ui/container'
-
-const steps = [
-  {
-    icon: ClipboardTextIcon,
-    title: 'Análise Técnica',
-    description:
-      'Visita ao local, levantamento de necessidades e estudo de viabilidade do projeto.',
-  },
-  {
-    icon: CalculatorIcon,
-    title: 'Orçamento Detalhado',
-    description:
-      'Proposta transparente com custos, materiais e prazos bem definidos.',
-  },
-  {
-    icon: CalendarDotsIcon,
-    title: 'Planejamento e Cronograma',
-    description:
-      'Definição de etapas, prazos e responsabilidades para execução eficiente.',
-  },
-  {
-    icon: HardHatIcon,
-    title: 'Execução da Obra',
-    description:
-      'Acompanhamento técnico rigoroso com qualidade e segurança em cada fase.',
-  },
-  {
-    icon: ShieldCheckIcon,
-    title: 'Entrega Garantida',
-    description:
-      'Entrega no prazo com garantia, laudos técnicos e total satisfação do cliente.',
-  },
-]
 
 export default function Steps() {
   return (
