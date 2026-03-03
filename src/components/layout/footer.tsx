@@ -1,59 +1,57 @@
+import logo from '@/assets/images/logo.png'
+import { siteConfig } from '@/config/site'
+import { navItems } from '@/data/navigation'
 import Image from 'next/image'
 import Container from '../ui/container'
 
-const navItems = [
-  { label: 'Início', href: '#' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Sobre', href: '#sobre' },
-  { label: 'Projetos', href: '#projetos' },
-  { label: 'Contato', href: '#contato' },
-]
-
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className='bg-primary'>
-      <Container className='pt-12 text-light'>
-        <div className='grid gap-8 md:grid-cols-3'>
-          <div>
-            <Image
-              src='/logo.webp'
-              width={128}
-              height={45}
-              alt='AOX'
-              className='w-24 lg:w-32'
-            />
-            <p className='mt-2 font-medium text-light/60'>
-              Engenharia com responsabilidade técnica
+    <footer className='bg-primary pt-16 pb-8 text-light'>
+      <Container>
+        <div className='grid gap-12 md:grid-cols-3'>
+          <div className='flex flex-col gap-4'>
+            <Image src={logo} alt={siteConfig.name} className='w-36' />
+            <p className='max-w-sm font-medium text-light/70'>
+              {siteConfig.description}
             </p>
           </div>
 
           <div>
-            <p className='mb-3 font-bold'>Navegação</p>
-            <div className='flex flex-col gap-3'>
+            <h3 className='mb-4 text-lg font-bold'>Navegação</h3>
+            <ul className='flex flex-col gap-2'>
               {navItems.map(({ href, label }) => (
-                <a
-                  key={href}
-                  href={href}
-                  className='text-light/60 transition-colors hover:text-accent'
-                >
-                  {label}
-                </a>
+                <li key={href}>
+                  <a
+                    href={href}
+                    className='text-light/70 transition-colors hover:text-accent'
+                  >
+                    {label}
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <div>
-            <p className='mb-3 font-bold'>Contato</p>
-            <div className='flex flex-col gap-3 text-light/60'>
-              <span>WhatsApp: (65) 99958-0809</span>
-              <span>Telefone: (65) 99958-0809</span>
-              <span>aox.engenharia@gmail.com</span>
-            </div>
+            <p className='mb-4 text-lg font-bold'>Contato</p>
+            <ul className='space-y-3 text-light/70'>
+              <li>
+                <strong>WhatsApp:</strong> {siteConfig.contact.phone}
+              </li>
+              <li>
+                <strong>Email:</strong> {siteConfig.contact.email}
+              </li>
+              <li>
+                <strong>Localização:</strong> {siteConfig.contact.address}
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className='mt-10 border-t border-light/20 py-6 text-center text-sm text-light/40'>
-          © 2026 AOX Engenharia. Todos os direitos reservados.
+        <div className='mt-12 border-t border-light/10 pt-8 text-center text-sm text-light/40'>
+          © {currentYear} {siteConfig.name}. Todos os direitos reservados.
         </div>
       </Container>
     </footer>

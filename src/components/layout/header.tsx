@@ -1,5 +1,8 @@
 'use client'
 
+import logo from '@/assets/images/logo.png'
+import { siteConfig } from '@/config/site'
+import { navItems } from '@/data/navigation'
 import { cn } from '@/lib/utils'
 import { ListIcon, XIcon } from '@phosphor-icons/react/ssr'
 import Image from 'next/image'
@@ -7,29 +10,20 @@ import { useState } from 'react'
 import Button from '../ui/button'
 import Container from '../ui/container'
 
-const navItems = [
-  { label: 'Início', href: '#' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Sobre', href: '#sobre' },
-  { label: 'Projetos', href: '#projetos' },
-  { label: 'Contato', href: '#contato' },
-]
-
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-
   const toggleMenu = () => setIsOpen((prev) => !prev)
   const closeMenu = () => setIsOpen(false)
 
   return (
     <header className='sticky top-0 left-0 z-10 w-full bg-primary'>
       <Container className='flex h-16 items-center justify-between text-light md:h-20 xl:h-24'>
-        <a href='#' className='w-28 lg:w-32 xl:w-40'>
-          <Image src='/logo.webp' alt='AOX' width={671} height={238} />
+        <a href='#' className='w-28 lg:w-32 xl:w-40' onClick={closeMenu}>
+          <Image src={logo} alt={siteConfig.name} />
         </a>
 
         <nav className='hidden items-center gap-8 md:flex'>
-          {navItems.map(({ label, href }) => (
+          {navItems.map(({ href, label }) => (
             <a
               key={href}
               href={href}
@@ -39,7 +33,7 @@ export default function Header() {
             </a>
           ))}
           <Button
-            href='https://api.whatsapp.com/send/?phone=5565999580809'
+            href={siteConfig.social.whatsapp}
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -68,7 +62,7 @@ export default function Header() {
             color='#fff'
             size={32}
             weight='regular'
-            alt='Menu'
+            alt='Abrir Menu'
             className={cn(
               'absolute transition-transform duration-300 ease-in-out',
               isOpen ? 'scale-0 opacity-70' : 'scale-100 opacity-100',
@@ -78,21 +72,27 @@ export default function Header() {
 
         <div
           className={cn(
-            'absolute top-full left-0 w-full origin-top rounded-b-xl bg-primary shadow-md transition-all duration-300 ease-in-out md:hidden',
+            'absolute top-full left-0 w-full origin-top rounded-b-xl bg-primary shadow-lg transition-all duration-300 ease-in-out md:hidden',
             isOpen ? 'scale-y-100' : 'pointer-events-none scale-y-0',
           )}
         >
-          <nav className='flex flex-col items-center px-6 pb-2'>
+          <nav className='flex flex-col items-center gap-6 border-t border-light/10 py-6'>
             {navItems.map(({ href, label }) => (
               <a
                 key={label}
                 href={href}
                 onClick={closeMenu}
-                className='flex py-2 text-lg font-medium underline-offset-4 transition-colors hover:underline'
+                className='text-xl font-medium text-light/90 hover:text-accent'
               >
                 {label}
               </a>
             ))}
+            <Button
+              href={siteConfig.social.whatsapp}
+              className='w-3/4 justify-center'
+            >
+              Fale conosco
+            </Button>
           </nav>
         </div>
       </Container>
