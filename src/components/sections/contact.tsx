@@ -1,3 +1,4 @@
+import { siteConfig } from '@/config/site'
 import {
   ChatCircleIcon,
   EnvelopeSimpleIcon,
@@ -9,30 +10,28 @@ type ContactProps = {
   id: string
 } & React.ComponentProps<'section'>
 
-const WHATSAPP_URL = 'https://wa.me/5565999999999'
-
-const contacts = [
-  {
-    icon: ChatCircleIcon,
-    label: 'WhatsApp',
-    value: '(65) 99958-0809',
-    href: WHATSAPP_URL,
-  },
-  {
-    icon: PhoneIcon,
-    label: 'Telefone',
-    value: '(65) 99958-0809',
-    href: 'tel:+5565999999999',
-  },
-  {
-    icon: EnvelopeSimpleIcon,
-    label: 'Email',
-    value: 'aox.engenharia@gmail.com',
-    href: 'mailto:aox.engenharia@gmail.com',
-  },
-]
-
 export default function Contact({ id, ...props }: ContactProps) {
+  const contacts = [
+    {
+      icon: ChatCircleIcon,
+      label: 'WhatsApp',
+      value: siteConfig.contact.phone,
+      href: siteConfig.social.whatsapp,
+    },
+    {
+      icon: PhoneIcon,
+      label: 'Telefone',
+      value: siteConfig.contact.phone,
+      href: `tel:${siteConfig.contact.phoneRaw}`,
+    },
+    {
+      icon: EnvelopeSimpleIcon,
+      label: 'Email',
+      value: siteConfig.contact.email,
+      href: `mailto:${siteConfig.contact.email}`,
+    },
+  ]
+
   return (
     <section id={id} className='bg-accent' {...props}>
       <Container className='section-padding text-center text-light'>
@@ -48,8 +47,8 @@ export default function Contact({ id, ...props }: ContactProps) {
               key={c.label}
               href={c.href}
               target={c.label === 'WhatsApp' ? '_blank' : undefined}
-              rel={c.label === 'WhatsApp' ? 'noopener noreferrer' : undefined}
-              className='flex flex-col items-center gap-2 rounded-xl bg-light/10 p-6 backdrop-blur transition-colors hover:bg-light/20'
+              rel='noopener noreferrer'
+              className='flex flex-col items-center gap-2 rounded-xl bg-light/10 p-6 transition-colors hover:bg-light/20'
             >
               <c.icon color='#fff' size={32} weight='regular' />
               <p className='font-bold'>{c.label}</p>

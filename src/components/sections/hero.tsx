@@ -1,3 +1,5 @@
+import heroImgMobile from '@/assets/images/hero-mobile.png'
+import heroImgDesktop from '@/assets/images/hero.png'
 import Image from 'next/image'
 import Button from '../ui/button'
 import Container from '../ui/container'
@@ -15,22 +17,22 @@ export default function Hero({ id, ...props }: HeroProps) {
     >
       <div className='absolute inset-0 -z-10 sm:hidden'>
         <Image
-          src='/hero-mobile.webp'
+          src={heroImgMobile}
           alt='Imagem de fundo AOX'
+          placeholder='blur'
           fill
           priority
           className='object-cover object-center'
-          quality={90}
         />
       </div>
       <div className='absolute inset-0 -z-10 hidden sm:block'>
         <Image
-          src='/hero.webp'
+          src={heroImgDesktop}
           alt='Imagem de fundo AOX'
+          placeholder='blur'
           fill
           priority
           className='object-cover object-center'
-          quality={90}
         />
       </div>
       <div className='pointer-events-none absolute inset-0 z-0 bg-linear-to-b from-primary via-primary/10 to-transparent' />
