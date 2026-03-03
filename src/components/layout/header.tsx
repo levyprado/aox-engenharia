@@ -39,9 +39,9 @@ export default function Header() {
             </a>
           ))}
           <Button
-            href='https://google.com'
+            href='https://api.whatsapp.com/send/?phone=5565999580809'
             target='_blank'
-            rel='noreferrer noopener'
+            rel='noopener noreferrer'
           >
             Fale conosco
           </Button>
