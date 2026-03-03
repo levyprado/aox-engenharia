@@ -1,3 +1,4 @@
+import sobreImg from '@/assets/images/sobre.png'
 import { CertificateIcon, MedalIcon } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Container from '../ui/container'
@@ -48,9 +49,7 @@ export default function About({ id, ...props }: AboutProps) {
           </div>
         </div>
         <Image
-          src='/sobre.png'
-          width={1200}
-          height={896}
+          src={sobreImg}
           alt='Equipe AOX analisando projetos em obra'
           className='size-full rounded-2xl object-cover'
         />
