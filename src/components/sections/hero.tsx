@@ -52,7 +52,12 @@ export default function Hero({ id, ...props }: HeroProps) {
             >
               Ver serviços
             </Button>
-            <Button href='#' className='px-6 py-2.5'>
+            <Button
+              href='https://api.whatsapp.com/send/?phone=5565999580809'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-6 py-2.5'
+            >
               Fale conosco
             </Button>
           </div>
