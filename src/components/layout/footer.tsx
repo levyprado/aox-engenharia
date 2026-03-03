@@ -45,10 +45,9 @@ export default function Footer() {
           <div>
             <p className='mb-3 font-bold'>Contato</p>
             <div className='flex flex-col gap-3 text-light/60'>
-              <span>WhatsApp: (65) 99999-9999</span>
-              <span>Telefone: (65) 99999-9999</span>
-              <span>contato@aoxengenharia.com.br</span>
-              <span className='mt-2 text-accent'>CREA-MT nº XXXXX</span>
+              <span>WhatsApp: (65) 99958-0809</span>
+              <span>Telefone: (65) 99958-0809</span>
+              <span>aox.engenharia@gmail.com</span>
             </div>
           </div>
         </div>
