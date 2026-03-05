@@ -2,13 +2,9 @@ import { services } from '@/data/services'
 import Image from 'next/image'
 import Container from '../ui/container'
 
-type ServicesProps = {
-  id: string
-} & React.ComponentProps<'section'>
-
-export default function Services({ id, ...props }: ServicesProps) {
+export default function Services({ id }: { id: string }) {
   return (
-    <section id={id} {...props} className='bg-gray-50'>
+    <section id={id} className='bg-gray-50'>
       <Container className='section-padding'>
         <h2 className='text-3xl font-semibold md:text-4xl'>
           A AOX Engenharia -{' '}

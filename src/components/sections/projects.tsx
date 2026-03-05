@@ -2,13 +2,9 @@ import { projects } from '@/data/projects'
 import Image from 'next/image'
 import Container from '../ui/container'
 
-type ProjectsProps = {
-  id: string
-} & React.ComponentProps<'section'>
-
-export default function Projects({ id, ...props }: ProjectsProps) {
+export default function Projects({ id }: { id: string }) {
   return (
-    <section id={id} className='bg-gray-50' {...props}>
+    <section id={id} className='bg-gray-50'>
       <Container className='section-padding flex flex-col gap-6 lg:gap-12'>
         <div className='space-y-1 text-center lg:space-y-2'>
           <h2 className='text-3xl font-extrabold text-balance md:text-4xl'>

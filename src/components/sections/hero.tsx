@@ -4,16 +4,11 @@ import Image from 'next/image'
 import Button from '../ui/button'
 import Container from '../ui/container'
 
-type HeroProps = {
-  id: string
-} & React.ComponentProps<'section'>
-
-export default function Hero({ id, ...props }: HeroProps) {
+export default function Hero({ id }: { id: string }) {
   return (
     <section
       id={id}
       className='relative flex h-[80svh] w-full flex-col sm:h-[70vh]'
-      {...props}
     >
       <div className='absolute inset-0 -z-10 sm:hidden'>
         <Image

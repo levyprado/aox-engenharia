@@ -6,11 +6,7 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 import Container from '../ui/container'
 
-type ContactProps = {
-  id: string
-} & React.ComponentProps<'section'>
-
-export default function Contact({ id, ...props }: ContactProps) {
+export default function Contact({ id }: { id: string }) {
   const contacts = [
     {
       icon: ChatCircleIcon,
@@ -33,7 +29,7 @@ export default function Contact({ id, ...props }: ContactProps) {
   ]
 
   return (
-    <section id={id} className='bg-accent' {...props}>
+    <section id={id} className='bg-accent'>
       <Container className='section-padding text-center text-light'>
         <h2 className='text-3xl font-extrabold text-balance md:text-4xl'>
           Pronto para iniciar seu projeto?

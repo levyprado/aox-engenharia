@@ -3,13 +3,9 @@ import { CertificateIcon, MedalIcon } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Container from '../ui/container'
 
-type AboutProps = {
-  id: string
-} & React.ComponentProps<'section'>
-
-export default function About({ id, ...props }: AboutProps) {
+export default function About({ id }: { id: string }) {
   return (
-    <section id={id} {...props}>
+    <section id={id}>
       <Container className='section-padding grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center'>
         <div className='flex flex-col gap-4 lg:gap-6'>
           <h2 className='text-3xl font-extrabold text-balance md:text-4xl'>
