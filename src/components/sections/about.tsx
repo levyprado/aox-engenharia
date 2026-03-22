@@ -1,7 +1,26 @@
 import sobreImg from '@/assets/images/sobre.png'
-import { CertificateIcon, MedalIcon } from '@phosphor-icons/react/dist/ssr'
+import {
+  ClockCountdownIcon,
+  HardHatIcon,
+  StarIcon,
+} from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Container from '../ui/container'
+
+const pillars = [
+  {
+    icon: StarIcon,
+    title: 'Qualidade construtiva',
+  },
+  {
+    icon: ClockCountdownIcon,
+    title: 'Compromisso com prazos',
+  },
+  {
+    icon: HardHatIcon,
+    title: 'Engenharia aplicada',
+  },
+]
 
 export default function About({ id }: { id: string }) {
   return (
@@ -12,38 +31,48 @@ export default function About({ id }: { id: string }) {
             Quem <span className='text-gradient'>Somos</span>
           </h2>
           <p className='text-lg leading-relaxed font-medium text-pretty text-primary/60 xl:text-xl'>
-            A AOX Engenharia é uma empresa de engenharia civil com sede em
-            Cuiabá, Mato Grosso, atuando em construção residencial, comercial e
-            na instalação de sistemas de energia solar fotovoltaica. Com
-            profissionais qualificados e registro ativo no CREA-MT, oferecemos
-            soluções completas de engenharia com responsabilidade técnica e
-            compromisso com a qualidade em cada obra.
+            A AOX Engenharia e Construções é uma empresa especializada na
+            execução de obras e soluções em engenharia civil, atuando nos
+            segmentos residencial, comercial e industrial.
+            <br />
+            <br />
+            Com atuação em Cuiabá – MT e região, a empresa desenvolve e executa
+            obras com foco em qualidade construtiva, planejamento técnico e
+            controle de prazos, garantindo segurança e eficiência em cada
+            projeto realizado.
+            <br />
+            <br />
+            Com uma abordagem baseada em engenharia aplicada, responsabilidade
+            técnica e compromisso com resultados, a empresa se posiciona como
+            parceira na realização de projetos sólidos e duradouros.
+            <br />
+            <br />
+            AOX Engenharia e Construções Execução com confiança.
           </p>
-          <div className='flex flex-col gap-4 lg:flex-row'>
-            <div className='flex items-center gap-3 rounded-lg border border-gray-200 p-3'>
-              <MedalIcon size={32} weight='regular' className='text-accent' />
-              <div className='flex flex-col'>
-                <h4 className='font-semibold'>Registro CREA-MT ativo</h4>
-                <p className='text-primary/60'>
-                  Empresa habilitada e regularizada
-                </p>
-              </div>
-            </div>
-            <div className='flex items-center gap-3 rounded-lg border border-gray-200 p-3'>
-              <CertificateIcon
-                size={32}
-                weight='regular'
-                className='text-accent'
-              />
-              <div className='flex flex-col'>
-                <h4 className='font-semibold'>
-                  Responsabilidade Técnica (ART)
-                </h4>
-                <p className='text-primary/60'>Em todas as obras realizadas</p>
-              </div>
+
+          <div className='flex flex-col gap-3'>
+            <p className='text-xs font-bold tracking-widest text-accent uppercase'>
+              Nossos pilares
+            </p>
+
+            <div className='flex flex-col gap-3 xl:flex-row'>
+              {pillars.map(({ icon: Icon, title }) => (
+                <div
+                  key={title}
+                  className='flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-3 shadow-xs xl:p-4'
+                >
+                  <div className='flex size-11 shrink-0 items-center justify-center rounded-lg bg-accent/10'>
+                    <Icon size={24} weight='bold' className='text-accent' />
+                  </div>
+                  <h4 className='leading-tight font-medium text-primary'>
+                    {title}
+                  </h4>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+
         <Image
           src={sobreImg}
           alt='Equipe AOX analisando projetos em obra'
