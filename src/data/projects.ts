@@ -29,10 +29,10 @@ export const projects: Project[] = [
     imgSrc: project2,
   },
   {
-    title: 'Sistema Solar 6000kWh — Cuiabá',
-    category: 'Solar',
+    title: 'Impermeabilização Predial — Cuiabá',
+    category: 'Residencial',
     description:
-      'Projeto e instalação de usina solar com monitoramento remoto.',
+      'A AOX Engenharia e Construções oferece soluções completas em impermeabilização predial, garantindo proteção estrutural contra infiltrações, umidade e degradação das edificações.',
     imgSrc: project3,
   },
   {
