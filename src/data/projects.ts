@@ -15,22 +15,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Residência Unifamiliar — Cuiabá',
+    title: 'Residência Unifamiliar — Cáceres',
     category: 'Residencial',
     description:
-      'Projeto e execução de residência de alto padrão com 280m², incluindo projeto estrutural e instalações completas.',
+      'Execução e desenvolvimento dos projetos de uma residência unifamiliar com área construída de 88 m², abrangendo todas as etapas do empreendimento, desde a concepção, elaboração e compatibilização dos projetos executivos até a execução integral da obra e entrega final.',
     imgSrc: project1,
   },
   {
-    title: 'Galpão Comercial — Várzea Grande',
-    category: 'Comercial',
+    title: 'Residência Unifamiliar — Cuiabá',
+    category: 'Residencial',
     description:
-      'Construção de galpão industrial de 1.200m² com estrutura metálica e piso de alta resistência.',
+      'A AOX Engenharia oferece o desenvolvimento dos projetos e a execução completa de residências unifamiliares de 54,66 m², com 02 quartos, sendo 01 suíte, proporcionando uma solução completa, desde a concepção do projeto até a entrega da obra pronta para uso.',
     imgSrc: project2,
   },
   {
     title: 'Impermeabilização Predial — Cuiabá',
-    category: 'Residencial',
+    category: 'Comercial',
     description:
       'A AOX Engenharia e Construções oferece soluções completas em impermeabilização predial, garantindo proteção estrutural contra infiltrações, umidade e degradação das edificações.',
     imgSrc: project3,
@@ -50,10 +50,10 @@ export const projects: Project[] = [
     imgSrc: project5,
   },
   {
-    title: 'Centro Comercial — Cuiabá',
-    category: 'Comercial',
+    title: 'Usina Fotovoltaica com potência instalada de 1,5 MWp - Cáceres',
+    category: 'Solar',
     description:
-      'Projeto e execução de centro comercial com 8 salas, estacionamento e fachada moderna.',
+      'Execução e implantação de uma Usina Fotovoltaica com potência instalada de 1,5 MWp, desenvolvida para atender aos mais elevados padrões de desempenho, segurança e confiabilidade.',
     imgSrc: project6,
   },
 ]
